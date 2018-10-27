@@ -1,6 +1,6 @@
 clear all
 close all
-
+clc
 global Ks_eff rho_s c_s void rho_a G h_v c_a U_ext D A T_inf
 global Tf_finalch Ts_finalch xmesh
 global T_in Tdisch
@@ -14,8 +14,8 @@ global p_Keff_f p_Keff_s
 % Baseline parameters:
 % H = 3 m, d = 0.02 m, G = 0.225 kg/m2 s, Tin = 823 K, solid material: steatite.
 
-T_in=900+273; %[K]=550°C
-Tdisch = 500+273; %[K] discharge T (=20°C)
+T_in=900+273; %[K]=550ï¿½C
+Tdisch = 500+273; %[K] discharge T (=20ï¿½C)
 Tavg = (T_in+Tdisch)/2; %[K] average T
 T_inf=293; %[K]
 
@@ -136,8 +136,8 @@ legend('Tf @t=10 min', 'Tf @t=60 min', 'Tf @t=180 min', 'Tf @t=300 min', 'Tf @t=
 
 %% STORAGE RATE OF CHARGE/DISCHARGE:
 dt=(tmax/60)/(n_tstep-1); %[min] step length over time
-Rate_Charge=diff(Ts)./dt; %[°C/min]
-Rate_Discharge=diff(Ts_disch)./dt; %[°C/min]
+Rate_Charge=diff(Ts)./dt; %[ï¿½C/min]
+Rate_Discharge=diff(Ts_disch)./dt; %[ï¿½C/min]
 time_rate=tstep(1:end-1);
 
 % figure 
